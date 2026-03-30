@@ -711,6 +711,48 @@ body {
   margin-bottom: 15px;
 }
 
+/* Project Title Link */
+.project-title-link {
+  color: var(--gta-cyan);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project-title-link:hover {
+  color: var(--gta-pink);
+  text-shadow: 0 0 15px var(--gta-pink);
+}
+
+/* Project Links */
+.project-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.project-live-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background: linear-gradient(135deg, var(--gta-pink), var(--gta-purple));
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border: 1px solid var(--gta-cyan);
+  clip-path: polygon(8px 0%, calc(100% - 8px) 0%, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0% calc(100% - 8px), 0% 8px);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 0, 128, 0.4);
+}
+
+.project-live-btn:hover {
+  background: linear-gradient(135deg, var(--gta-cyan), var(--gta-pink));
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
 .project-tech {
   font-size: 0.9rem;
   color: var(--gta-cyan);
