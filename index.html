@@ -4,212 +4,321 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HOUSSAM | PORTFOLIO</title>
+  <meta name="description" content="Houssame-Eddine Ait Moulay — Full Stack Developer & CS Student at Birmingham City University.">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Orbitron:wght@700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <script src="script.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&family=Bebas+Neue&family=Anton&display=swap" rel="stylesheet">
 </head>
-<body>
-  <div class="scanlines"></div>
-  <div class="particles" id="particles"></div>
-  
-  <!-- Navigation -->
-  <nav class="hud-nav">
-    <div class="hud-logo">HOUSSAM</div>
-    <div class="hud-menu">
-      <a href="#hero" class="hud-link">HOME</a>
-      <a href="#about" class="hud-link">ABOUT</a>
-      <a href="#projects" class="hud-link">PROJECTS</a>
-      <a href="#skills" class="hud-link">TOOLBOX</a>
-      <a href="#languages" class="hud-link">LANGUAGES</a>
-      <a href="#contact" class="hud-link">CONTACT</a>
-    </div>
-  </nav>
+<body class="no-scroll">
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-background"></div>
-    <div class="hero-content">
-      <div class="glitch-wrapper">
-        <h1 class="glitch">
-          <span class="glitch-line" data-text="HOUSSAME-">HOUSSAME-</span>
-          <span class="glitch-line" data-text="EDDINE">EDDINE</span>
-          <span class="glitch-line" data-text="AIT MOULAY">AIT MOULAY</span>
-        </h1>
-      </div>
-      <p class="hero-subtitle">
-        <span class="neon-text">DEVELOPER</span> • 
-        <span class="neon-text">INNOVATOR</span> • 
-        <span class="neon-text">GAMER</span>
-      </p>
-    </div>
-    <div class="hero-button-section">
-      <p class="hero-description">Building smart solutions, one line of code at a time.</p>
-      <a href="#about" class="btn btn-gta btn-hero-right">ENTER PORTFOLIO</a>
-    </div>
-    <div class="loading-bar"></div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="section-gta">
-    <div class="section-header">
-      <span class="section-number">01</span>
-      <h2 class="section-title">ABOUT ME</h2>
-    </div>
-    <div class="content-box">
-      <p class="gta-text">I’m Houssam, a second-year Computer Science student at Birmingham City University on track for a First Class Honours degree. I enjoy building web applications, IoT projects, and exploring new technologies. I’m passionate about solving problems, creating efficient solutions, and turning ideas into real projects.</p>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="section-gta">
-    <div class="section-header">
-      <span class="section-number">02</span>
-      <h2 class="section-title">PROJECTS</h2>
-    </div>
-    <div class="projects-grid">
-      <div class="project-card-gta">
-        <div class="project-icon">📁</div>
-        <h3><a href="https://filedrop-gules.vercel.app" target="_blank" rel="noopener noreferrer" class="project-title-link">FILEDROP</a></h3>
-        <p>Built and deployed a full-stack file sharing web app enabling users to upload files and generate secure shareable download links instantly. Features JWT-based auth, rate limiting, auto-expiring links, drag & drop uploads with real-time progress, QR code generation, and a user dashboard for file management.</p>
-        <div class="project-tech">Technologies: React, Node.js, Express, PostgreSQL, Supabase, Tailwind CSS</div>
-        <div class="project-links">
-          <a href="https://filedrop-gules.vercel.app" target="_blank" rel="noopener noreferrer" class="project-live-btn">LIVE DEMO ↗</a>
+  <!-- ══════════════════════════════════════
+       STAGE 1 — TERMINAL
+  ══════════════════════════════════════ -->
+  <div id="stage-terminal" class="stage show">
+    <div class="terminal-window">
+      <div class="terminal-bar">
+        <div class="t-dots">
+          <span class="t-dot" style="background:#ff5f57"></span>
+          <span class="t-dot" style="background:#febc2e"></span>
+          <span class="t-dot" style="background:#28c840"></span>
         </div>
-        <div class="project-glow"></div>
+        <span class="t-title">houssam@portfolio — bash</span>
+        <div style="width:52px"></div>
       </div>
-      <div class="project-card-gta">
-        <div class="project-icon">💼</div>
-        <h3>BLUE SPHERE ACCOUNTING (BSA)</h3>
-        <p>A secure web-based platform for small business owners to manage budgeting, invoicing, and expenses. Built full-stack functionality with database integration and real-time reporting.</p>
-        <div class="project-tech">Technologies: HTML, CSS, JavaScript, SQL, Node.js</div>
-        <div class="project-glow"></div>
-      </div>
-      <div class="project-card-gta">
-        <div class="project-icon">🌐</div>
-        <h3>PERSONAL PORTFOLIO WEBSITE</h3>
-        <p>My own portfolio to showcase projects and skills. Fully responsive and deployed on GitHub Pages.</p>
-        <div class="project-tech">Technologies: HTML, CSS, JavaScript, GitHub</div>
-        <div class="project-glow"></div>
-      </div>
-      <div class="project-card-gta">
-        <div class="project-icon">🍳</div>
-        <h3>SMART COOKER</h3>
-        <p>Software for a smart cooker, integrating Python, C++ and Arduino. Simulated circuits and hardware integration in Tinkercad.</p>
-        <div class="project-tech">Technologies: Python, C++, Arduino, Tinkercad</div>
-        <div class="project-glow"></div>
-      </div>
-      <div class="project-card-gta">
-        <div class="project-icon">💨</div>
-        <h3>SMART AIR PURIFIER</h3>
-        <p>Automated air quality monitoring with Arduino and sensors. Demonstrates IoT and embedded system skills.</p>
-        <div class="project-tech">Technologies: Arduino, Tinkercad, Sensors, C++</div>
-        <div class="project-glow"></div>
-      </div>
-      <div class="project-card-gta">
-        <div class="project-icon">🧬</div>
-        <h3>BARBARA MCCLINTOCK EDUCATIONAL WEBSITE</h3>
-        <p>Interactive website on the life and research of geneticist Barbara McClintock. Highlights front-end design and user experience.</p>
-        <div class="project-tech">Technologies: HTML, CSS, JavaScript, Figma</div>
-        <div class="project-glow"></div>
-      </div>
-      <div class="project-card-gta">
-        <div class="project-icon">🌐</div>
-        <h3>LAN CONFIGURATION</h3>
-        <p>Configured a fully functional Local Area Network with routing, switching, and IP addressing using Cisco Packet Tracer. Demonstrated networking proficiency, logical troubleshooting, and system configuration.</p>
-        <div class="project-tech">Technologies: Cisco Packet Tracer</div>
-        <div class="project-glow"></div>
-      </div>
+      <div class="terminal-body" id="terminal-body"></div>
     </div>
-  </section>
+  </div>
 
-  <!-- Skills Section - My Toolbox -->
-  <section id="skills" class="section-gta">
-    <div class="section-header">
-      <span class="section-number">03</span>
-      <h2 class="section-title">MY TOOLBOX</h2>
+  <!-- ══════════════════════════════════════
+       STAGE 2 — GAME LIBRARY (PS5-style)
+  ══════════════════════════════════════ -->
+  <div id="stage-library" class="stage">
+    <div class="lib-bg"></div>
+    <div class="lib-layout">
+      <aside class="lib-sidebar">
+        <div class="lib-sidebar-logo">▲</div>
+        <div class="lib-sidebar-icons">
+          <div class="lsi active" title="Library">🎮</div>
+          <div class="lsi" title="Store">🏪</div>
+          <div class="lsi" title="Achievements">🏆</div>
+          <div class="lsi" title="Friends">👥</div>
+        </div>
+        <div class="lsi lsi-bottom" title="Settings">⚙️</div>
+      </aside>
+      <main class="lib-main">
+        <div class="lib-topbar">
+          <div class="lib-tabs">
+            <span class="lib-tab active">MY LIBRARY</span>
+            <span class="lib-tab">DISCOVER</span>
+            <span class="lib-tab">FRIENDS</span>
+          </div>
+          <div class="lib-user">
+            <div class="lib-avatar">H</div>
+            <span class="lib-username">HOUSSAM</span>
+          </div>
+        </div>
+        <div class="lib-hero">
+          <div class="lib-hero-art">
+            <img src="images/BackgroundIMG1.png" alt="Portfolio Art">
+            <div class="lib-hero-grad"></div>
+          </div>
+          <div class="lib-hero-info">
+            <p class="lib-publisher">HOUSSAM STUDIOS · 2025</p>
+            <h1 class="lib-game-title">HOUSSAM<br>AIT MOULAY</h1>
+            <p class="lib-game-sub">THE PORTFOLIO</p>
+            <div class="lib-badges">
+              <span class="lib-badge">FULL STACK</span>
+              <span class="lib-badge">CS STUDENT</span>
+              <span class="lib-badge">BIRMINGHAM, UK</span>
+            </div>
+            <div class="lib-stats">
+              <div class="lib-stat"><strong>7+</strong><span>Projects</span></div>
+              <div class="lib-stat"><strong>10+</strong><span>Technologies</span></div>
+              <div class="lib-stat"><strong>4</strong><span>Languages</span></div>
+              <div class="lib-stat"><strong>1st</strong><span>Class Target</span></div>
+            </div>
+            <button id="launch-btn" class="lib-launch-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              LAUNCH
+            </button>
+          </div>
+        </div>
+        <div class="lib-strip">
+          <h3 class="lib-strip-heading">FEATURED PROJECTS</h3>
+          <div class="lib-strip-row">
+            <div class="lib-card" style="--accent:#00ffff"><div class="lc-icon">📁</div><span>FILEDROP</span></div>
+            <div class="lib-card" style="--accent:#ff0080"><div class="lc-icon">💼</div><span>BSA</span></div>
+            <div class="lib-card" style="--accent:#8000ff"><div class="lc-icon">🍳</div><span>SMART COOKER</span></div>
+            <div class="lib-card" style="--accent:#ff8000"><div class="lc-icon">💨</div><span>AIR PURIFIER</span></div>
+            <div class="lib-card" style="--accent:#00ff80"><div class="lc-icon">🌐</div><span>LAN CONFIG</span></div>
+          </div>
+        </div>
+      </main>
     </div>
-    <div class="toolbox-container">
-      <div class="toolbox-column">
-        <ul class="toolbox-list">
-          <li>Proficient in programming with Python, C++, HTML, CSS and JavaScript, with the ability to develop efficient algorithms, interactive websites and software applications.</li>
-          <li>Experienced in using Arduino, Tinkercad and sensors to design, simulate and test embedded systems and hardware-integrated projects.</li>
-          <li>Knowledgeable in networking concepts including LAN configuration, routing, switching and IP addressing using Cisco Packet Tracer.</li>
-          <li>Skilled in using development tools and platforms such as GitHub and Visual Studio Code for version control, collaborative coding and software development workflows.</li>
-          <li>Familiar with UI/UX design principles and able to create wireframes and prototypes using Figma.</li>
-          <li>Strong problem-solving, teamwork and project documentation skills, developed through academic projects and collaborative group work.</li>
-        </ul>
-      </div>
-      <div class="toolbox-column">
-        <ul class="toolbox-list">
-          <li>Proficient in Object-Oriented Programming (OOP) and Java, gained through academic modules and practical software development tasks.</li>
-          <li>Experienced in DevOps fundamentals, including working with Linux environments for deployment, automation and systems management.</li>
-          <li>Skilled in using SQL for database design, ERD creation, querying and integrating databases into full-stack applications.</li>
-          <li>Experienced in backend development, including building APIs, handling server-side logic and integrating databases for functional applications.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+  </div>
 
-  <!-- Languages Section -->
-  <section id="languages" class="section-gta">
-    <div class="section-header">
-      <span class="section-number">04</span>
-      <h2 class="section-title">LANGUAGES</h2>
-    </div>
-    <div class="skills-container">
-      <div class="skill-item">
-        <div class="skill-label">
-          <span class="skill-name">ARABIC</span>
-        </div>
-        <div class="wanted-stars" data-level="5"></div>
+  <!-- ══════════════════════════════════════
+       STAGE 3 — ROCKSTAR INTRO
+  ══════════════════════════════════════ -->
+  <div id="stage-rockstar" class="stage">
+    <div class="rs-siren rs-siren-left"></div>
+    <div class="rs-siren rs-siren-right"></div>
+    <div class="rs-center">
+      <div id="rs-logo" class="rs-logo">
+        <span class="rs-r">R</span><span class="rs-star">★</span>
       </div>
-      <div class="skill-item">
-        <div class="skill-label">
-          <span class="skill-name">ENGLISH</span>
-        </div>
-        <div class="wanted-stars" data-level="5"></div>
+      <div id="rs-presents" class="rs-presents">ROCKSTAR GAMES PRESENTS</div>
+      <div id="rs-namecard" class="rs-namecard">
+        <div class="rs-name">HOUSSAME-EDDINE<br>AIT MOULAY</div>
+        <div class="rs-namesub">— THE PORTFOLIO —</div>
       </div>
-      <div class="skill-item">
-        <div class="skill-label">
-          <span class="skill-name">FRENCH</span>
-        </div>
-        <div class="wanted-stars" data-level="5"></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-label">
-          <span class="skill-name">GERMAN</span>
-        </div>
-        <div class="wanted-stars" data-level="2"></div>
+      <div id="rs-loader" class="rs-loader">
+        <div class="rs-bar"><div id="rs-bar-fill" class="rs-bar-fill"></div></div>
+        <div class="rs-loader-text">LOADING PORTFOLIO...</div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section-gta">
-    <div class="section-header">
-      <span class="section-number">05</span>
-      <h2 class="section-title">CONTACT</h2>
-    </div>
-    <div class="contact-box">
-      <div class="contact-item">
-        <span class="contact-label">EMAIL:</span>
-        <a href="mailto:houssam.aitmoulay17@gmail.com" class="contact-link">houssam.aitmoulay17@gmail.com</a>
-      </div>
-      <div class="contact-item">
-        <span class="contact-label">PHONE:</span>
-        <a href="tel:+447789171281" class="contact-link">+44 7789171281</a>
-      </div>
-      <div class="contact-item">
-        <span class="contact-label">LOCATION:</span>
-        <span class="contact-value">Birmingham, UK</span>
-      </div>
-    </div>
-  </section>
+  <!-- ══════════════════════════════════════
+       MAIN PORTFOLIO
+  ══════════════════════════════════════ -->
+  <div id="main-content">
 
-  <footer class="gta-footer">
-    <p>© 2025 HOUSSAME-EDDINE AIT MOULAY | ALL RIGHTS RESERVED</p>
-    <div class="footer-glitch"></div>
-  </footer>
+    <!-- Nav -->
+    <nav class="site-nav" id="site-nav">
+      <div class="nav-links">
+        <a href="#intro"    class="nav-link active-link">Home</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills"   class="nav-link">Skills</a>
+        <a href="#contact"  class="nav-link">Contact</a>
+      </div>
+      <button class="nav-theme-btn" id="nav-theme-btn" aria-label="Toggle theme" title="Toggle theme">☽</button>
+    </nav>
+
+    <!-- Main column -->
+    <main class="site-main">
+
+      <!-- ── INTRO ── -->
+      <section id="intro" class="s-intro">
+        <h1 class="intro-greeting"><span id="greeting-text">مرحباً</span></h1>
+        <div class="intro-block">
+          <p class="intro-name">Houssame-Eddine Ait Moulay <img src="images/verified.png" class="verified-badge" alt="verified"></p>
+          <p class="intro-role shimmer-role">Full Stack Developer</p>
+        </div>
+        <p class="intro-bio">
+          I build stuff for the web. My stack includes
+          <span class="bio-highlight">React</span>,
+          <span class="bio-highlight">Node.js</span>,
+          <span class="bio-highlight">PostgreSQL</span>, and an unhealthy amount of determination.
+        </p>
+        <p class="intro-bio">
+          Currently a second-year CS student at Birmingham City University, on track for a First Class Honours degree. If I'm not coding you'll find me gaming, learning something new, or overthinking system design.
+        </p>
+      </section>
+
+
+
+      <!-- ── PROJECTS ── -->
+      <section id="projects" class="s-section">
+        <div class="s-heading-row">
+          <h2 class="s-heading">Projects</h2>
+          <button class="wheel-trigger-btn" id="projects-wheel-btn" data-wheel="projects">◎ Wheel</button>
+        </div>
+
+        <div class="proj-list">
+
+          <div class="proj-row">
+            <div class="proj-row-header">
+              <span class="proj-row-name"><a href="https://filedrop-gules.vercel.app" target="_blank" rel="noopener" class="proj-row-link">FileDrop ↗</a></span>
+              <span class="proj-row-tag">Full Stack</span>
+            </div>
+            <p class="proj-row-desc">Full-stack file sharing app — upload files and generate secure shareable download links instantly. JWT auth, rate limiting, auto-expiring links, drag & drop with real-time progress, QR code generation, and a user dashboard.</p>
+            <p class="proj-row-tech">React · Node.js · Express · PostgreSQL · Supabase · Tailwind CSS</p>
+          </div>
+
+          <div class="proj-row">
+            <div class="proj-row-header">
+              <span class="proj-row-name">Blue Sphere Accounting</span>
+              <span class="proj-row-tag">Web App</span>
+            </div>
+            <p class="proj-row-desc">Secure platform for small business owners to manage budgeting, invoicing, and expenses. Built full-stack with database integration and real-time reporting.</p>
+            <p class="proj-row-tech">HTML · CSS · JavaScript · SQL · Node.js</p>
+          </div>
+
+          <div class="proj-row">
+            <div class="proj-row-header">
+              <span class="proj-row-name">Smart Cooker</span>
+              <span class="proj-row-tag">IoT</span>
+            </div>
+            <p class="proj-row-desc">Software for a smart cooker integrating Python, C++ and Arduino. Simulated circuits and hardware integration in Tinkercad.</p>
+            <p class="proj-row-tech">Python · C++ · Arduino · Tinkercad</p>
+          </div>
+
+          <div class="proj-row">
+            <div class="proj-row-header">
+              <span class="proj-row-name">Smart Air Purifier</span>
+              <span class="proj-row-tag">IoT</span>
+            </div>
+            <p class="proj-row-desc">Automated air quality monitoring with Arduino and sensors. Demonstrates IoT and embedded systems skills.</p>
+            <p class="proj-row-tech">Arduino · Tinkercad · Sensors · C++</p>
+          </div>
+
+          <div class="proj-row">
+            <div class="proj-row-header">
+              <span class="proj-row-name">Barbara McClintock Website</span>
+              <span class="proj-row-tag">Frontend</span>
+            </div>
+            <p class="proj-row-desc">Interactive educational website on geneticist Barbara McClintock. Highlights front-end design and user experience principles.</p>
+            <p class="proj-row-tech">HTML · CSS · JavaScript · Figma</p>
+          </div>
+
+          <div class="proj-row">
+            <div class="proj-row-header">
+              <span class="proj-row-name">LAN Configuration</span>
+              <span class="proj-row-tag">Networking</span>
+            </div>
+            <p class="proj-row-desc">Configured a fully functional Local Area Network with routing, switching, and IP addressing using Cisco Packet Tracer.</p>
+            <p class="proj-row-tech">Cisco Packet Tracer</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── SKILLS ── -->
+      <section id="skills" class="s-section">
+        <div class="s-heading-row">
+          <h2 class="s-heading">Stack I Know</h2>
+          <button class="wheel-trigger-btn" id="skills-wheel-btn" data-wheel="skills">◎ Wheel</button>
+        </div>
+        <div class="tech-logos">
+          <div class="tech-logo" data-name="Python"><i class="devicon-python-plain colored"></i></div>
+          <div class="tech-logo" data-name="C++"><i class="devicon-cplusplus-plain colored"></i></div>
+          <div class="tech-logo" data-name="Java"><i class="devicon-java-plain colored"></i></div>
+          <div class="tech-logo" data-name="JavaScript"><i class="devicon-javascript-plain colored"></i></div>
+          <div class="tech-logo" data-name="HTML5"><i class="devicon-html5-plain colored"></i></div>
+          <div class="tech-logo" data-name="CSS3"><i class="devicon-css3-plain colored"></i></div>
+          <div class="tech-logo" data-name="React"><i class="devicon-react-original colored"></i></div>
+          <div class="tech-logo" data-name="Tailwind CSS"><i class="devicon-tailwindcss-plain colored"></i></div>
+          <div class="tech-logo" data-name="Node.js"><i class="devicon-nodejs-plain colored"></i></div>
+          <div class="tech-logo" data-name="Express"><i class="devicon-express-original colored"></i></div>
+          <div class="tech-logo" data-name="PostgreSQL"><i class="devicon-postgresql-plain colored"></i></div>
+          <div class="tech-logo" data-name="Supabase"><i class="devicon-supabase-plain colored"></i></div>
+          <div class="tech-logo" data-name="Git"><i class="devicon-git-plain colored"></i></div>
+          <div class="tech-logo" data-name="GitHub"><i class="devicon-github-original" style="color:#ccc"></i></div>
+          <div class="tech-logo" data-name="VS Code"><i class="devicon-vscode-plain colored"></i></div>
+          <div class="tech-logo" data-name="Linux"><i class="devicon-linux-plain colored"></i></div>
+          <div class="tech-logo" data-name="Figma"><i class="devicon-figma-plain colored"></i></div>
+          <div class="tech-logo" data-name="Arduino"><i class="devicon-arduino-plain colored"></i></div>
+          <div class="tech-logo" data-name="SQL"><i class="devicon-azuresqldatabase-plain colored"></i></div>
+        </div>
+      </section>
+
+
+      <!-- ── LANGUAGES ── -->
+      <section id="languages" class="s-section">
+        <h2 class="s-heading">Languages</h2>
+        <div class="lang-list">
+          <div class="lang-row">
+            <span class="lang-name">Arabic</span>
+            <div class="wanted-stars" data-level="5"></div>
+            <span class="lang-level">Native</span>
+          </div>
+          <div class="lang-row">
+            <span class="lang-name">English</span>
+            <div class="wanted-stars" data-level="5"></div>
+            <span class="lang-level">Fluent</span>
+          </div>
+          <div class="lang-row">
+            <span class="lang-name">French</span>
+            <div class="wanted-stars" data-level="5"></div>
+            <span class="lang-level">Fluent</span>
+          </div>
+          <div class="lang-row">
+            <span class="lang-name">German</span>
+            <div class="wanted-stars" data-level="2"></div>
+            <span class="lang-level">Beginner</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CONTACT ── -->
+      <section id="contact" class="s-section">
+        <h2 class="s-heading">Connect</h2>
+        <p class="contact-intro">Feel free to reach out for collaborations or just a friendly hello.</p>
+        <div class="contact-links">
+          <a href="mailto:houssam.aitmoulay17@gmail.com" class="contact-link">Email ↗</a>
+          <a href="https://github.com/HoussamAM" target="_blank" rel="noopener" class="contact-link">GitHub ↗</a>
+          <a href="tel:+447789171281" class="contact-link">+44 7789 171 281</a>
+          <span class="contact-link contact-loc">Birmingham, UK</span>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p>© 2025 Houssame-Eddine Ait Moulay</p>
+    </footer>
+
+  </div><!-- /main-content -->
+
+  <!-- ══════════════════════════════════════
+       WEAPON WHEEL OVERLAY
+  ══════════════════════════════════════ -->
+  <div id="wheel-overlay" class="wheel-overlay hidden">
+    <div class="wheel-backdrop" id="wheel-backdrop"></div>
+    <div class="wheel-wrap">
+      <svg id="wheel-svg" class="wheel-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"></svg>
+      <div class="wheel-center-info">
+        <div id="wc-icon"  class="wc-icon">?</div>
+        <div id="wc-title" class="wc-title">SELECT</div>
+        <div id="wc-desc"  class="wc-desc"></div>
+      </div>
+    </div>
+    <div class="wheel-hint">HOVER TO SELECT · ESC OR CLICK OUTSIDE TO CLOSE</div>
+    <div class="wheel-type-label" id="wheel-type-label">MISSIONS</div>
+  </div>
 
 </body>
 </html>
