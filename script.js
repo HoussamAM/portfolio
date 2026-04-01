@@ -101,10 +101,10 @@ async function runTerminal() {
 
   const lines = [
     { type: 'cmd', text: 'whoami' },
-    { type: 'out', text: 'houssam-ait-moulay' },
+    { type: 'out', text: 'houssam-aitmoulay' },
     { type: 'cmd', text: 'cat welcome.txt' },
     { type: 'out', text: '> Hello! Welcome to my portfolio.' },
-    { type: 'out', text: '> CS student · Full-Stack Developer · Gamer' },
+    { type: 'out', text: '> CS student · Full-Stack Developer · AI Engineering Enthusiast' },
     { type: 'out', text: '> Birmingham City University, UK' },
     { type: 'cmd', text: 'launch --portfolio' },
     { type: 'out', text: 'Initializing game library...' },
@@ -252,7 +252,7 @@ function initNav() {
         navLinks.forEach(l => l.classList.remove('active-link'));
         const id = entry.target.id;
         const map = { intro: '#intro', experience: '#experience', projects: '#projects', skills: '#skills', languages: '#languages', contact: '#contact' };
-        const active = document.querySelector(`.nav-link[href="${map[id] || '#'+id}"]`);
+        const active = document.querySelector(`.nav-link[href="${map[id] || '#' + id}"]`);
         if (active) active.classList.add('active-link');
       }
     });
@@ -261,7 +261,7 @@ function initNav() {
 
   // Mobile burger (kept for compatibility)
   const burger = document.getElementById('hud-burger');
-  const links  = document.getElementById('hud-links');
+  const links = document.getElementById('hud-links');
   if (burger && links) {
     burger.addEventListener('click', () => links.classList.toggle('open'));
     links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
@@ -276,14 +276,14 @@ function initSectionAnims() {
   const io = new IntersectionObserver(entries => {
     entries.forEach((e) => {
       if (e.isIntersecting) {
-        e.target.style.opacity   = '1';
+        e.target.style.opacity = '1';
         e.target.style.transform = 'none';
         io.unobserve(e.target);
       }
     });
   }, { threshold: .06 });
   sections.forEach(s => {
-    s.style.opacity   = '0';
+    s.style.opacity = '0';
     s.style.transform = 'translateY(24px)';
     s.style.transition = 'opacity .6s ease, transform .6s ease';
     io.observe(s);
