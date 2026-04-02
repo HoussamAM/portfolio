@@ -623,8 +623,29 @@ document.addEventListener('DOMContentLoaded', () => {
   initSounds();
   initGlitch();
   initGreetingCycle();
-
+  initTheme();
 
   // Start terminal
   runTerminal();
 });
+
+// ─────────────────────────────────────────────
+// THEME TOGGLE — dark / light
+// ─────────────────────────────────────────────
+function initTheme() {
+  const btn = $('nav-theme-btn');
+  if (!btn) return;
+
+  // Apply saved preference on load
+  const saved = localStorage.getItem('theme');
+  if (saved === 'light') {
+    document.body.classList.add('light');
+    btn.textContent = '☀';
+  }
+
+  btn.addEventListener('click', () => {
+    const isLight = document.body.classList.toggle('light');
+    btn.textContent = isLight ? '☀' : '☽';
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+  });
+}
