@@ -185,34 +185,22 @@ function initLibrary() {
 // STAGE 3 — ROCKSTAR INTRO
 // ─────────────────────────────────────────────
 async function runRockstarIntro() {
-  const presents = $('rs-presents');
   const namecard = $('rs-namecard');
   const loaderEl = $('rs-loader');
   const barFill = $('rs-bar-fill');
   const sirenL = qs('.rs-siren-left');
   const sirenR = qs('.rs-siren-right');
 
-  // Phase 1 — presents text fades in
-  await sleep(400);
-  presents.classList.add('visible');
-
-  // Phase 3 — flash
-  await sleep(1400);
-  document.querySelector('#stage-rockstar').style.background = '#fff';
-  await sleep(80);
-  document.querySelector('#stage-rockstar').style.background = '#000';
-
-  // Phase 4 — hide presents, show name card
-  await sleep(300);
-  presents.style.opacity = '0';
+  // Phase 1 — name card fades in
+  await sleep(500);
   namecard.classList.add('visible');
 
-  // Phase 5 — siren lights
-  await sleep(600);
+  // Phase 2 — siren lights
+  await sleep(800);
   sirenL.classList.add('active');
   sirenR.classList.add('active');
 
-  // Phase 6 — loader appears & fills
+  // Phase 3 — loader appears & fills
   await sleep(900);
   sirenL.classList.remove('active');
   sirenR.classList.remove('active');
@@ -220,7 +208,7 @@ async function runRockstarIntro() {
   await sleep(100);
   barFill.style.width = '100%';
 
-  // Phase 7 — transition to main
+  // Phase 4 — transition to main
   await sleep(1800);
   endAllStages();
 }

@@ -1157,7 +1157,7 @@ body.no-scroll {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  animation: shimmer 3.5s linear infinite;
+  animation: shimmer 6s linear infinite;
 }
 
 @keyframes shimmer {
@@ -1185,15 +1185,13 @@ body.no-scroll {
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background: rgba(255, 255, 255, .04);
-  border: 1px solid rgba(255, 255, 255, .06);
+  background: transparent;
+  border: none;
   cursor: default;
-  transition: background .2s, border-color .2s, transform .2s;
+  transition: transform .2s;
 }
 
 .tech-logo:hover {
-  background: rgba(255, 255, 255, .09);
-  border-color: rgba(255, 255, 255, .15);
   transform: translateY(-3px);
 }
 
@@ -1256,7 +1254,8 @@ body.no-scroll {
 }
 
 .s-heading {
-  font-size: .7rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -1441,8 +1440,17 @@ details[open] .exp-chevron {
 .proj-row-tech {
   font-family: 'Share Tech Mono', monospace;
   font-size: .72rem;
-  color: #444;
   letter-spacing: .3px;
+  background: linear-gradient(90deg,
+      #555 0%, #555 30%,
+      #e0e0e0 50%,
+      #555 70%, #555 100%);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 3.5s linear infinite;
 }
 
 /* ── SKILLS ── */
