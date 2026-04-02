@@ -589,7 +589,7 @@ function initGreetingCycle() {
     'Bonjour',       // French
     'Hallo',         // German
     'Hi choom!',     // Cyberpunk 2077
-    'Oi mate',       // British
+    'ⴰⵣⵓⵍ',        // Tamazight
   ];
   let idx = 0;
 
