@@ -185,7 +185,6 @@ function initLibrary() {
 // STAGE 3 — ROCKSTAR INTRO
 // ─────────────────────────────────────────────
 async function runRockstarIntro() {
-  const logo = $('rs-logo');
   const presents = $('rs-presents');
   const namecard = $('rs-namecard');
   const loaderEl = $('rs-loader');
@@ -193,12 +192,8 @@ async function runRockstarIntro() {
   const sirenL = qs('.rs-siren-left');
   const sirenR = qs('.rs-siren-right');
 
-  // Phase 1 — logo fades in
+  // Phase 1 — presents text fades in
   await sleep(400);
-  logo.classList.add('visible');
-
-  // Phase 2 — Rockstar presents text
-  await sleep(1800);
   presents.classList.add('visible');
 
   // Phase 3 — flash
@@ -207,9 +202,8 @@ async function runRockstarIntro() {
   await sleep(80);
   document.querySelector('#stage-rockstar').style.background = '#000';
 
-  // Phase 4 — hide logo/presents, show name card
+  // Phase 4 — hide presents, show name card
   await sleep(300);
-  logo.style.opacity = '0';
   presents.style.opacity = '0';
   namecard.classList.add('visible');
 
@@ -584,11 +578,11 @@ function initGreetingCycle() {
   if (!el) return;
 
   const greetings = [
-    'مرحباً',       // Arabic
+    'السلام عليكم',   // Arabic
     'Hello',         // English
     'Bonjour',       // French
     'Hallo',         // German
-    'Hi choom!',     // Cyberpunk 2077
+    'Hi choom!',    // Cyberpunk 2077
     'ⴰⵣⵓⵍ',        // Tamazight
   ];
   let idx = 0;
