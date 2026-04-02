@@ -1037,7 +1037,7 @@ body.no-scroll {
   right: 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 0 24px;
   height: 52px;
   background: rgba(17, 17, 17, .95);
@@ -1048,6 +1048,9 @@ body.no-scroll {
 .nav-links {
   display: flex;
   gap: 28px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-link {
@@ -1536,6 +1539,52 @@ details[open] .exp-chevron {
   }
 }
 
+/* ── EDUCATION ── */
+.edu-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.edu-row {
+  padding: 20px 0;
+  border-top: 1px solid rgba(255,255,255,.05);
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+.edu-row-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.edu-institution {
+  font-size: .92rem;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.edu-date {
+  font-size: .75rem;
+  color: #555;
+  flex-shrink: 0;
+}
+
+.edu-degree {
+  font-size: .86rem;
+  color: #666;
+  line-height: 1.75;
+  margin-bottom: 2px;
+}
+
+.edu-location {
+  font-size: .75rem;
+  color: #444;
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: .3px;
+}
+
 /* ── CONTACT ── */
 .contact-intro {
   font-size: .88rem;
@@ -1551,14 +1600,27 @@ details[open] .exp-chevron {
 }
 
 .contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   font-size: .88rem;
   color: #888;
   text-decoration: none;
   transition: color .2s;
 }
 
+.contact-link svg {
+  flex-shrink: 0;
+  opacity: .6;
+  transition: opacity .2s;
+}
+
 a.contact-link:hover {
   color: #e8e8e8;
+}
+
+a.contact-link:hover svg {
+  opacity: 1;
 }
 
 .contact-loc {
