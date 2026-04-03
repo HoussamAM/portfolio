@@ -1143,17 +1143,36 @@ body.no-scroll {
 /* Greeting cycling */
 #greeting-text {
   display: inline-block;
-  transition: opacity .35s ease, transform .35s ease;
 }
 
 #greeting-text.fade-out {
-  opacity: 0;
-  transform: translateY(-6px);
+  animation: fadeOutUp 0.35s ease forwards;
 }
 
 #greeting-text.fade-in {
-  opacity: 1;
-  transform: translateY(0);
+  animation: fadeInUp 0.35s ease forwards;
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Shimmer role */
