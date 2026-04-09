@@ -21,7 +21,7 @@ const PROJECTS_WHEEL = [
 ];
 
 const SKILLS_WHEEL = [
-  { icon: '💻', title: 'PROGRAMMING', desc: 'Python · C++ · Java · JS', color: '#ff0080' },
+  { icon: '💻', title: 'PROGRAMMING', desc: 'Python · C++ · Java · JS/TS', color: '#ff0080' },
   { icon: '🌐', title: 'WEB DEV', desc: 'React · Node.js · Express', color: '#00ffff' },
   { icon: '🗄️', title: 'DATABASE', desc: 'SQL · PostgreSQL · Supabase', color: '#8000ff' },
   { icon: '⚙️', title: 'DEVOPS', desc: 'Linux · GitHub · Vercel · Render', color: '#ff8000' },
