@@ -7,9 +7,20 @@
   <title>HOUSSAM | PORTFOLIO</title>
   <meta name="description"
     content="Houssame-Eddine Ait Moulay — Full Stack Developer & CS Student at Birmingham City University.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Houssam Ait Moulay — Portfolio">
+  <meta property="og:description" content="Full Stack Developer & CS Student at Birmingham City University.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/BackgroundIMG1.png">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Houssam Ait Moulay — Portfolio">
+  <meta name="twitter:description" content="Full Stack Developer & CS Student at Birmingham City University.">
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
   <link rel="stylesheet" href="style.css">
   <link
-    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Orbitron:wght@700;900&family=Share+Tech+Mono&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=Orbitron:wght@700;900&family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <script src="script.js" defer></script>
@@ -65,7 +76,7 @@
         </div>
         <div class="lib-hero">
           <div class="lib-hero-art">
-            <img src="images/BackgroundIMG1.png" alt="Portfolio Art">
+            <img src="images/BackgroundIMG1.png" alt="Portfolio Art" loading="lazy">
             <div class="lib-hero-grad"></div>
           </div>
           <div class="lib-hero-info">
@@ -79,8 +90,8 @@
               <span class="lib-badge" style="color: #febc2e; border-color: #febc2e;">🏆 HACKATHON WINNER</span>
             </div>
             <div class="lib-stats">
-              <div class="lib-stat"><strong>8+</strong><span>Projects</span></div>
-              <div class="lib-stat"><strong>10+</strong><span>Technologies</span></div>
+              <div class="lib-stat"><strong>9+</strong><span>Projects</span></div>
+              <div class="lib-stat"><strong>20+</strong><span>Technologies</span></div>
               <div class="lib-stat"><strong>4</strong><span>Languages</span></div>
               <div class="lib-stat"><strong>1st</strong><span>Class Target</span></div>
             </div>
@@ -95,6 +106,12 @@
         <div class="lib-strip">
           <h3 class="lib-strip-heading">FEATURED PROJECTS</h3>
           <div class="lib-strip-row">
+            <div class="lib-card" style="--accent:#0066b1">
+              <div class="lc-icon">🚗</div><span>BMW TRACKER</span>
+            </div>
+            <div class="lib-card" style="--accent:#10b981">
+              <div class="lc-icon">🏥</div><span>GETCARE AI</span>
+            </div>
             <div class="lib-card" style="--accent:#00ffff">
               <div class="lc-icon">📁</div><span>FILEDROP</span>
             </div>
@@ -203,6 +220,33 @@
             <p class="proj-row-tech">TypeScript · Tailwind CSS · React · Supabase · SQLite</p>
           </div>
 
+          <div class="proj-row" style="background: rgba(0, 102, 177, 0.06); padding: 1.5rem; border-radius: 12px;">
+            <div class="proj-row-header">
+              <span class="proj-row-name">Physical Asset Tracking Vision Platform</span>
+              <span class="proj-row-tag" style="background: #0066b1; color: #fff; font-weight: 600;">🏭 BMW Group</span>
+            </div>
+            <p class="proj-row-desc">Built a real-time computer vision vehicle tracking platform repurposing BMW's
+              existing CCTV infrastructure with zero new hardware. Fine-tuned YOLOv8m on a custom-merged dataset (813
+              images) achieving 0.937 mAP50, with ByteTrack multi-object tracking maintaining persistent vehicle identity
+              across 4 camera feeds. Converted 2D pixel positions to real-world XYZ floor coordinates via homography
+              mapping. Exposed live telemetry through a Flask REST API integrated with a Unity 3D dashboard. Built
+              anomaly detection for predictive maintenance alerts and route heatmap analytics. Pitched live to BMW
+              industry judges.</p>
+            <p class="proj-row-tech">Python · YOLOv8 · ByteTrack · OpenCV · Flask · Unity</p>
+          </div>
+
+          <div class="proj-row">
+            <div class="proj-row-header">
+              <span class="proj-row-name">GetCare AI</span>
+              <span class="proj-row-tag">AI Platform</span>
+            </div>
+            <p class="proj-row-desc">Full-stack AI platform for hospital data analysis and decision support. Integrated
+              LLM-based extraction (Groq LLaMA) to convert unstructured healthcare text into validated structured data.
+              Designed a rule-based trust scoring system to evaluate hospital capabilities and detect inconsistencies.
+              Implemented natural language querying, caching, and a modular scalable architecture.</p>
+            <p class="proj-row-tech">FastAPI · React · TypeScript · Groq LLaMA · REST APIs</p>
+          </div>
+
           <div class="proj-row">
             <div class="proj-row-header">
               <span class="proj-row-name"><a href="https://filedrop-gules.vercel.app" target="_blank" rel="noopener"
@@ -228,7 +272,7 @@
           <div class="proj-row">
             <div class="proj-row-header">
               <span class="proj-row-name"><a href="https://github.com/HoussamAM/Smart-Cooker" target="_blank"
-                  rel="noopener" class="proj-row-link">Smart Cooker ↗</span>
+                  rel="noopener" class="proj-row-link">Smart Cooker ↗</a></span>
               <span class="proj-row-tag">IoT</span>
             </div>
             <p class="proj-row-desc">Software for a smart cooker integrating Python, C++ and Arduino. Simulated circuits
@@ -296,6 +340,10 @@
           <div class="tech-logo" data-name="Figma"><i class="devicon-figma-plain colored"></i></div>
           <div class="tech-logo" data-name="Arduino"><i class="devicon-arduino-plain colored"></i></div>
           <div class="tech-logo" data-name="SQL"><i class="devicon-azuresqldatabase-plain colored"></i></div>
+          <div class="tech-logo" data-name="OpenCV"><i class="devicon-opencv-plain colored"></i></div>
+          <div class="tech-logo" data-name="Flask"><i class="devicon-flask-original" style="color:#ccc"></i></div>
+          <div class="tech-logo" data-name="Unity"><i class="devicon-unity-plain" style="color:#ccc"></i></div>
+          <div class="tech-logo" data-name="FastAPI"><i class="devicon-fastapi-plain colored"></i></div>
         </div>
       </section>
 
@@ -410,7 +458,7 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-      <p>© 2025 Houssame-Eddine Ait Moulay</p>
+      <p>© 2026 Houssame-Eddine Ait Moulay</p>
     </footer>
 
   </div><!-- /main-content -->

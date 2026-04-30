@@ -10,6 +10,8 @@
 // DATA — Wheel segments
 // ─────────────────────────────────────────────
 const PROJECTS_WHEEL = [
+  { icon: '🚗', title: 'BMW TRACKER', desc: 'CV vehicle tracking for BMW', color: '#0066b1', url: null },
+  { icon: '🏥', title: 'GETCARE AI', desc: 'AI healthcare analytics', color: '#10b981', url: null },
   { icon: '📁', title: 'FILEDROP', desc: 'Full-stack file sharing app', color: '#00ffff', url: 'https://filedrop-gules.vercel.app' },
   { icon: '💼', title: 'BSA', desc: 'Blue Sphere Accounting platform', color: '#ff0080', url: null },
   { icon: '🌐', title: 'PORTFOLIO', desc: 'This portfolio website', color: '#8000ff', url: null },
@@ -17,17 +19,17 @@ const PROJECTS_WHEEL = [
   { icon: '💨', title: 'AIR PURIFIER', desc: 'Smart air quality monitor', color: '#00ff80', url: null },
   { icon: '🧬', title: 'BARBARA MC', desc: 'Educational genetics website', color: '#ff4080', url: null },
   { icon: '🔌', title: 'LAN CONFIG', desc: 'Cisco network configuration', color: '#ffff00', url: null },
-  { icon: '🔒', title: 'CLASSIFIED', desc: 'Coming soon…', color: '#333', url: null },
 ];
 
 const SKILLS_WHEEL = [
   { icon: '💻', title: 'PROGRAMMING', desc: 'Python · C++ · Java · JS/TS', color: '#ff0080' },
-  { icon: '🌐', title: 'WEB DEV', desc: 'React · Node.js · Express', color: '#00ffff' },
+  { icon: '🌐', title: 'WEB DEV', desc: 'React · Node.js · Express · FastAPI', color: '#00ffff' },
+  { icon: '🤖', title: 'AI / CV', desc: 'YOLOv8 · OpenCV · LLMs · ByteTrack', color: '#10b981' },
   { icon: '🗄️', title: 'DATABASE', desc: 'SQL · PostgreSQL · Supabase', color: '#8000ff' },
   { icon: '⚙️', title: 'DEVOPS', desc: 'Linux · GitHub · Vercel · Render', color: '#ff8000' },
   { icon: '🔌', title: 'IOT', desc: 'Arduino · Tinkercad · Sensors', color: '#00ff80' },
   { icon: '📡', title: 'NETWORKING', desc: 'LAN · Cisco Packet Tracer', color: '#ff4040' },
-  { icon: '🎨', title: 'DESIGN', desc: 'Figma · UI/UX · Prototyping', color: '#ffff00' },
+  { icon: '🎨', title: 'DESIGN', desc: 'Figma · UI/UX · Unity 3D', color: '#ffff00' },
   { icon: '🤝', title: 'SOFT SKILLS', desc: 'Problem-Solving · Teamwork', color: '#ff80ff' },
 ];
 
@@ -39,34 +41,7 @@ const qs = sel => document.querySelector(sel);
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-// ─────────────────────────────────────────────
-// PARTICLES
-// ─────────────────────────────────────────────
-function initParticles() {
-  const container = $('particles');
-  if (!container) return;
-  for (let i = 0; i < 50; i++) {
-    const p = document.createElement('div');
-    const size = Math.random() * 3 + 1;
-    const color = Math.random() > .5 ? '#00ffff' : '#ff0080';
-    Object.assign(p.style, {
-      position: 'absolute',
-      width: size + 'px', height: size + 'px',
-      background: color, borderRadius: '50%',
-      left: Math.random() * 100 + '%',
-      top: Math.random() * 100 + '%',
-      boxShadow: `0 0 ${Math.random() * 8 + 3}px ${color}`,
-      '--dx': (Math.random() * 160 - 80) + 'px',
-      '--dy': (Math.random() * 160 - 80) + 'px',
-      '--sm': Math.random() * .5 + .5,
-      '--o0': Math.random() * .4 + .1,
-      '--o1': Math.random() * .7 + .1,
-      animation: `pFloat ${Math.random() * 18 + 8}s infinite`,
-      pointerEvents: 'none',
-    });
-    container.appendChild(p);
-  }
-}
+
 
 // ─────────────────────────────────────────────
 // STAGE TRANSITIONS
@@ -241,13 +216,6 @@ function initNav() {
   }, { rootMargin: '-30% 0px -55% 0px' });
   sections.forEach(s => io.observe(s));
 
-  // Mobile burger (kept for compatibility)
-  const burger = document.getElementById('hud-burger');
-  const links = document.getElementById('hud-links');
-  if (burger && links) {
-    burger.addEventListener('click', () => links.classList.toggle('open'));
-    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
-  }
 }
 
 // ─────────────────────────────────────────────
@@ -298,15 +266,7 @@ function initStars() {
   document.querySelectorAll('.wanted-stars').forEach(c => io.observe(c));
 }
 
-// ─────────────────────────────────────────────
-// PROJECT CARD COLORS (apply CSS var)
-// ─────────────────────────────────────────────
-function initProjectCards() {
-  document.querySelectorAll('.proj-card').forEach(card => {
-    const color = card.getAttribute('data-color') || 'var(--cyan)';
-    card.style.setProperty('--c', color);
-  });
-}
+
 
 // ─────────────────────────────────────────────
 // WEB AUDIO — subtle UI sounds
@@ -594,34 +554,18 @@ function initGreetingCycle() {
   }, 2500);
 }
 
-// ─────────────────────────────────────────────
-// RANDOM GLITCH on hero
-// ─────────────────────────────────────────────
-function initGlitch() {
-  const lines = document.querySelectorAll('.glitch-line');
-  setInterval(() => {
-    if (Math.random() > .65) {
-      lines.forEach(l => {
-        l.style.animation = 'none';
-        setTimeout(() => { l.style.animation = ''; }, 12);
-      });
-    }
-  }, 3500);
-}
+
 
 // ─────────────────────────────────────────────
 // BOOT — DOMContentLoaded
 // ─────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  initParticles();
   initLibrary();
   initNav();
   initSectionAnims();
   initStars();
-  initProjectCards();
   initWheel();
   initSounds();
-  initGlitch();
   initGreetingCycle();
   initTheme();
 
