@@ -14,23 +14,25 @@ const PROJECTS_WHEEL = [
   { icon: '🏥', title: 'GETCARE AI', desc: 'AI healthcare analytics', color: '#10b981', url: null },
   { icon: '📁', title: 'FILEDROP', desc: 'Full-stack file sharing app', color: '#00ffff', url: 'https://filedrop-gules.vercel.app' },
   { icon: '💼', title: 'BSA', desc: 'Blue Sphere Accounting platform', color: '#ff0080', url: null },
-  { icon: '🌐', title: 'PORTFOLIO', desc: 'This portfolio website', color: '#8000ff', url: null },
-  { icon: '🍳', title: 'SMART COOKER', desc: 'IoT cooker with Arduino & Python', color: '#ff8000', url: null },
+  { icon: '🍳', title: 'SMART COOKER', desc: 'IoT cooker — 3D printed MVP', color: '#ff8000', url: null },
   { icon: '💨', title: 'AIR PURIFIER', desc: 'Smart air quality monitor', color: '#00ff80', url: null },
+  { icon: '🔓', title: 'PENTEST LAB', desc: 'Offensive security red-team lab', color: '#ff4040', url: null },
   { icon: '🧬', title: 'BARBARA MC', desc: 'Educational genetics website', color: '#ff4080', url: null },
   { icon: '🔌', title: 'LAN CONFIG', desc: 'Cisco network configuration', color: '#ffff00', url: null },
+  { icon: '🌐', title: 'PORTFOLIO', desc: 'This portfolio website', color: '#8000ff', url: null },
 ];
 
 const SKILLS_WHEEL = [
   { icon: '💻', title: 'PROGRAMMING', desc: 'Python · C++ · Java · JS/TS', color: '#ff0080' },
   { icon: '🌐', title: 'WEB DEV', desc: 'React · Node.js · Express · FastAPI', color: '#00ffff' },
   { icon: '🤖', title: 'AI / CV', desc: 'YOLOv8 · OpenCV · LLMs · ByteTrack', color: '#10b981' },
+  { icon: '🔓', title: 'SECURITY', desc: 'Nmap · Metasploit · Burp Suite · AD', color: '#ff4040' },
   { icon: '🗄️', title: 'DATABASE', desc: 'SQL · PostgreSQL · Supabase', color: '#8000ff' },
   { icon: '⚙️', title: 'DEVOPS', desc: 'Linux · GitHub · Vercel · Render', color: '#ff8000' },
-  { icon: '🔌', title: 'IOT', desc: 'Arduino · Tinkercad · Sensors', color: '#00ff80' },
-  { icon: '📡', title: 'NETWORKING', desc: 'LAN · Cisco Packet Tracer', color: '#ff4040' },
-  { icon: '🎨', title: 'DESIGN', desc: 'Figma · UI/UX · Unity 3D', color: '#ffff00' },
-  { icon: '🤝', title: 'SOFT SKILLS', desc: 'Problem-Solving · Teamwork', color: '#ff80ff' },
+  { icon: '🔌', title: 'IOT', desc: 'Arduino · 3D Printing · Sensors', color: '#00ff80' },
+  { icon: '📡', title: 'NETWORKING', desc: 'LAN · Cisco · Wireshark', color: '#ffff00' },
+  { icon: '🎨', title: 'DESIGN', desc: 'Figma · UI/UX · Unity 3D', color: '#ff80ff' },
+  { icon: '🤝', title: 'SOFT SKILLS', desc: 'Problem-Solving · Teamwork', color: '#aaa' },
 ];
 
 // ─────────────────────────────────────────────
