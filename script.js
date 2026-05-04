@@ -559,6 +559,94 @@ function initGreetingCycle() {
 
 
 // ─────────────────────────────────────────────
+// ANIMATED FAVICON — neon pulsing "H"
+// ─────────────────────────────────────────────
+function initAnimatedFavicon() {
+  const canvas = document.createElement('canvas');
+  canvas.width = 32;
+  canvas.height = 32;
+  const ctx = canvas.getContext('2d');
+  const link = document.getElementById('favicon');
+  if (!link) return;
+
+  let frame = 0;
+  const FPS = 24;
+  let lastTime = 0;
+
+  function lerp(a, b, t) { return a + (b - a) * t; }
+
+  function hexToRgb(hex) {
+    const r = parseInt(hex.slice(1, 3), 16);
+    const g = parseInt(hex.slice(3, 5), 16);
+    const b = parseInt(hex.slice(5, 7), 16);
+    return [r, g, b];
+  }
+
+  const cyan = hexToRgb('#00ffff');
+  const pink = hexToRgb('#ff0080');
+
+  function drawFavicon(timestamp) {
+    if (timestamp - lastTime < 1000 / FPS) {
+      requestAnimationFrame(drawFavicon);
+      return;
+    }
+    lastTime = timestamp;
+    frame++;
+
+    // Cycle between cyan and pink using a sine wave
+    const t = (Math.sin(frame * 0.06) + 1) / 2;
+    const r = Math.round(lerp(cyan[0], pink[0], t));
+    const g = Math.round(lerp(cyan[1], pink[1], t));
+    const b = Math.round(lerp(cyan[2], pink[2], t));
+    const glowColor = `rgb(${r},${g},${b})`;
+
+    // Pulse the glow intensity
+    const glowSize = 4 + Math.sin(frame * 0.08) * 2;
+
+    // Clear
+    ctx.clearRect(0, 0, 32, 32);
+
+    // Dark background with rounded corners
+    ctx.fillStyle = '#0a0a0a';
+    ctx.beginPath();
+    ctx.roundRect(0, 0, 32, 32, 6);
+    ctx.fill();
+
+    // Subtle border
+    ctx.strokeStyle = `rgba(${r},${g},${b},0.3)`;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.roundRect(0.5, 0.5, 31, 31, 6);
+    ctx.stroke();
+
+    // Draw "H" with neon glow
+    ctx.save();
+    ctx.font = 'bold 22px Arial, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+
+    // Outer glow
+    ctx.shadowColor = glowColor;
+    ctx.shadowBlur = glowSize * 2;
+    ctx.fillStyle = glowColor;
+    ctx.fillText('H', 16, 17);
+
+    // Inner bright core
+    ctx.shadowBlur = glowSize;
+    ctx.fillStyle = '#fff';
+    ctx.fillText('H', 16, 17);
+    ctx.restore();
+
+    // Update favicon
+    link.href = canvas.toDataURL('image/png');
+
+    requestAnimationFrame(drawFavicon);
+  }
+
+  requestAnimationFrame(drawFavicon);
+}
+
+// ─────────────────────────────────────────────
 // BOOT — DOMContentLoaded
 // ─────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
@@ -570,6 +658,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSounds();
   initGreetingCycle();
   initTheme();
+  initAnimatedFavicon();
 
   // Start terminal
   runTerminal();
